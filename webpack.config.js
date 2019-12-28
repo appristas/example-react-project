@@ -25,14 +25,14 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react', 'es2015']
+                        presets: ['@babel/preset-react', '@babel/preset-env']
                     }
                 }
             },
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader', 'css-loader', 'sass-loader'
+                    'style-loader', 'css-loader', 'postcss-loader', 'sass-loader'
                 ]
             }
         ]
